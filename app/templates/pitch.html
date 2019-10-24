@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<br>
+
+<div style="color: whitesmoke; font-family: mali; font-size: 43px; margin-left: 20px;">
+    <p>NEW PITCH</p> <hr>
+</div>
+<div class="container">
+    <div class="jumbotron" style="color: whitesmoke; font-family: fantasy;background: rgba(70, 94, 105, 0.561); width: 130vh; margin-left: 20vh;">
+            <div style="margin-left: 15vh; width: 120vh;color: whitesmoke;" class="col-md-8">{{wtf.quick_form(form)}}</div>
+        </div>
+    </div>
+</div>
+
+{% endblock%} 
