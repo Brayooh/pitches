@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content%}
+{% block styles %}
+{{super()}}
+{% endblock %}
+
+    <div class="text-center container h-55 justify-content-center" style="margin-top: 10vh; font-family: Montserrat; color: rgb(204, 204, 204);">
+        <div class="jumbotron" style="margin-left: 55vh; background: rgba(34, 41, 54, 0.685);;width: 60vh;">
+            <h3 class="text-center login-text" id="login"> <b> Login </b></h3>
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            <div class="division" id="centered-card">
+                <form action="/login" method="POST">
+                    <label style="color: rgb(0, 0, 0);" for="username"> Username</label>
+                    <input type="text" class="form-control" placeholder="Username" name="username"> <br>
+                    <label style="color: rgb(0, 0, 0);" for="password" >Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="password"> <br>
+                    <button id="hellobutton" type="submit" class="btn btn-success">Login</button>
+                </form> <br>
+                <p class="login-text" id="option-signup">Don't have an account? <a href="/signup" style="color: rgb(97, 97, 255);"> <u> Sign Up</u></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

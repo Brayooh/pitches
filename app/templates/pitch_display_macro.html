@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% macro display_pitches(posts) %}
+<div class="container-fluid">
+        
+            <a href="/new_post"><button class="btn" style="font-family: mali; color: rgb(160, 160, 160); font-size: 23px;"><u>Create New Pitch</u></button></a> <hr>
+            <h1 style="font-family: mali; color: whitesmoke; font-size: 63px;" class="">PITCHES</h1> <hr>
+    <div class="card-columns">
+        {% if posts %}
+        {% for my_post in posts %}
+        <div class="card" style="font-family: fantasy; background: rgba(176, 227, 240, 0.822);">
+            <div class="card-header"><p><br>Category: {{my_post.category}}</p></div>
+            <div class="card-body">
+                <p>{{my_post.post}}</p>
+            </div>
+            <div class="card-footer foot_flex d-block mx-auto">
+                <a href="/like/{{my_post.id}}"><button class="btn btn-success"> <img src="https://www.freeiconspng.com/uploads/youtube-like-button-png-11.png" alt="like" height="20vh" >  {{my_post.up_vote.count()}}</button></a>
+                <a href="/dislike/{{my_post.id}}"><button class="btn btn-danger"><img src="https://purepng.com/public/uploads/large/black-dislike-thumb-pointing-down-9mx.png" alt="dislike" height="20vh"> {{my_post.down_vote.count()}}</button></a> <br> <br>
+                <a href="/comment/{{my_post.id}}"><button class="btn btn-info">Comment</button></a>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}
