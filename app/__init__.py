@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail
 
-from config import Config
+from config import config_options
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -15,8 +15,8 @@ login_manager.login_view = 'auth.login'
 login_manager.session_protection = 'strong'
 
 
-def create_app():
-    app.config.from_object(Config)
+def create_app(config_name):
+    app.config.from_object(config_options[config_name])
     from .auth import auth as auth_blueprint
     from .main import main as main_blueprint
     app.register_blueprint(auth_blueprint)
