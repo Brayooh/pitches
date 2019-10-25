@@ -5,7 +5,7 @@ ld()
 
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = "postgresql://brayooh:brian@localhost/pitch"
+    # SQLALCHEMY_DATABASE_URI = "postgresql://brayooh:brian@localhost/pitch"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SECRET_KEY = 'qwertyuiop'
 
@@ -21,7 +21,7 @@ class Config:
     
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    pass
+
 class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = "postgresql://brayooh:brian@localhost/pitch"
 
