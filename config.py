@@ -7,7 +7,6 @@ ld()
 class Config:
     debug = True
     SQLALCHEMY_DATABASE_URI = "postgresql://brayooh:brian@localhost/pitch"
-    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SECRET_KEY = 'qwertyuiop'
 
@@ -18,5 +17,22 @@ class Config:
     MAIL_USE_SSL = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+
+class ProdConfig(Config):
+    pass
+
+class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+
+class TestConfig(Config):
+     SQLALCHEMY_DATABASE_URI = "postgresql://brayooh:brian@localhost/pitch"
+
+config_options = {
+   'development': DevConfig,
+   'production': ProdConfig,
+   'test': TestConfig
+}
+
+
 
 

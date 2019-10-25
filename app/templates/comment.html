@@ -8,18 +8,22 @@
 {% endblock %}
 
 {% block content %}
+<BR>
 <div class="container-fluid">
-    <div class="jumbotron">
-        <h1>Comments page</h1>
-        <a href="/posts"><button class="btn">All Pitches</button></a>
-    </div>
-<div class="row col-md-12">
-    <div class="col-md-4">
-        <div class="text-white">{{wtf.quick_form(form)}}</div>
-    </div>
-    <div class="col-md-8">
-        <h2 class="text-center text-white">All comments:</h2>
-        <p>{{display_comments(comments)}}</p>
+        <a  href="/posts"><button style="font-family: fantasy; font-size: 22px;color: whitesmoke;" class="btn"><u> All Pitches</u></button></a>
+    <h1 style="color: whitesmoke;font-family: mali; font-size: 64px;">COMMENTS</h1>
+   
+    <hr>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="jumbotron" style="background: rgba(61, 123, 151, 0.575);">
+                <div class="text-white">{{wtf.quick_form(form)}}</div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <h2 class="text-center text-white">All comments:</h2>
+            <p>{{display_comments(comments)}}</p>
+        </div>
     </div>
 </div>
 
