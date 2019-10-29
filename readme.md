@@ -5,9 +5,6 @@ Pitch! is an application that allows users to create  one minute pitches. The us
 ## Author
 > Ndichu Brian
 
-## Screenshots
-<img src="https://github.com/kamauvick/1m-Pitch/blob/master/app/static/assets/shot.png?raw=true" width="1000">
-<img src="https://github.com/kamauvick/1m-Pitch/blob/master/app/static/assets/shot2.png?raw=true" width="1000">
 
 
 ## Installations
