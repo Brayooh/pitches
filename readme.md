@@ -1,5 +1,5 @@
 # Pitch!
-1m-Pitch is an application that allows users to create  one minute pitches. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
+Pitch! is an application that allows users to create  one minute pitches. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
 
 
 ## Author
@@ -17,7 +17,7 @@ The following command installs all the application requirements
 
 ## Setup
 Run 
-``git clone https://github.com/kamauvick/1m-Pitch.git``
+``git clone https://github.com/brayooh/pitches.git``
 
 or download the zip file from github.
 
@@ -33,11 +33,11 @@ After extracting the files,
 >``source virtual/bin/activate.``
 
 4. Running the application
->``python3 manage.py server``
+>``python3.6 manage.py server``
 
 5. Running tests
 
- > ``python3 manage.py test.``
+ > ``python3.6 manage.py test.``
 
 ## Technologies used
 * Python3
@@ -84,7 +84,7 @@ After extracting the files,
 
 
 ## License
-> MIT License &copy; 2019 Victor Waichigo
+> MIT License &copy; 2019 Ndichu Brian
 
 ## Collaborate
 To collaborate, reach me on [brianndichu.bn@gmail.com]()

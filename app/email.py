@@ -10,3 +10,4 @@ def email_message(subject, template, to, **kwargs):
     email.body = render_template(template + ".txt", **kwargs)
     email.html = render_template(template + ".html", **kwargs)
     mail.send(email)
+ 
